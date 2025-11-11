@@ -1,0 +1,1 @@
+print("“I, Furina, will use this trial to show the world the true meaning of justice!”")
