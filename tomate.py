@@ -4,10 +4,14 @@ t = turtle.Turtle()
 
 
 turtle.Screen().screensize(600,500)
-t.speed(1)
+t.speed(10)
 tamanho =random.randint(50,100)
 tamanho2 =random.randint(20,50)
-def tomate():
+def tomate(x,y):
+    t.penup()
+    t.goto(x,y)
+    t.pendown()
+    t.color("black")
     t.fillcolor("red")
     t.begin_fill()
     t.circle(tamanho)
@@ -44,8 +48,8 @@ def tomate():
     t.forward(25)
     t.right(35)
     t.forward(25)
-
-
-tomate()
-
-turtle.done
+    t.color("black")
+    t.pensize()
+turtle.onscreenclick(tomate,1)
+turtle.tracer(False)
+turtle.done()
